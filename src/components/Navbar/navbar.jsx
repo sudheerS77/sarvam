@@ -1,24 +1,24 @@
 import React from "react";
 import { RiSearchLine } from "react-icons/ri";
-
+import { Link } from "react-router-dom";
 const LgNavbar = () => {
   const navItems = [
     {
       name: "Home",
       link: "/",
     },
-    // {
-    //   name: "About us",
-    //   link: "/",
-    // },
-    // {
-    //   name: "Products",
-    //   link: "/",
-    // },
-    // {
-    //   name: "Business Partners",
-    //   link: "/",
-    // },
+    {
+      name: "About us",
+      link: "/about",
+    },
+    {
+      name: "Products",
+      link: "/",
+    },
+    {
+      name: "Business Partners",
+      link: "/",
+    },
     {
       name: "Training",
       link: "/",
@@ -76,12 +76,16 @@ const LgNavbar = () => {
         <div className="flex items-center justify-between w-full px-12 bg-green-500 py-2 font-bold text-gray-50">
           <div className="flex items-center justify-center gap-5 list-none">
             {navItems.map((item) => (
-              <li>{item.name}</li>
+              <Link to={`${item.link}`} key={`${item.name}`}>
+                <li>{item.name}</li>
+              </Link>
             ))}
           </div>
           <div className="flex items-center justify-center gap-5 list-none">
             {navItems1.map((item) => (
-              <li>{item.name}</li>
+              <Link to={`${item.link}`} key={`${item.name}`}>
+                <li>{item.name}</li>
+              </Link>
             ))}
           </div>
         </div>
