@@ -48,7 +48,7 @@ const Products = (props) => {
       <h3 className="text-2xl font-bold text-gray-700 mb-5">{props.name}</h3>
       <Slider {...settings}>
         {carouselImages.map((item) => (
-          <div key={`${item.name}`}>
+          <div>
             <div className="w-80 flex flex-col items-center justify-center gap-8 shadow-xl rounded-lg hover:bg-gray-100">
               <div className="w-full h-72 border border-gray-200 rounded-t-lg">
                 <img src={`${item.image}`} alt="" className="w-full h-full" />
