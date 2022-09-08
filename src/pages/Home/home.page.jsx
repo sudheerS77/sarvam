@@ -9,7 +9,6 @@ import Aboutpage from "../about/about";
 const HomePage = () => {
   return (
     <div className="relative">
-      <LgNavbar />
       <CarouselComponent />
       <div className="px-20 flex flex-col gap-20">
         <Cards />
