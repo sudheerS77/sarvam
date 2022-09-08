@@ -43,8 +43,8 @@ const TopCollections = () => {
       <h3 className="text-xl font-bold text-gray-500 mb-5">TOP COLLECTION</h3>
       <Slider {...settings}>
         {carouselImages.map((item) => (
-          <div>
-            <div className="w-80 flex flex-col items-center justify-center shadow-xl border border-gray-200">
+          <div key={`${item.name}`}>
+            <div className="w-80 flex flex-col items-center justify-center shadow-xl border border-gray-200 ">
               <div className="w-full h-72 border-b border-gray-200">
                 <img src={`${item.image}`} alt="" className="w-full h-full" />
               </div>

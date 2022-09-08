@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import ImageComponent from "./imge.component";
 
 const CarouselComponent = () => {
   var settings = {
@@ -11,22 +12,15 @@ const CarouselComponent = () => {
     slidesToScroll: 1,
   };
   const carouselImages = [
-    "https://sarvamsafety.com/image/cache/catalog/banner/Banner1-1170x500.jpg",
-    "https://sarvamsafety.com/image/cache/catalog/banner/Banner1-1170x500.jpg",
-    "https://sarvamsafety.com/image/cache/catalog/banner/Banner2-1170x500.jpg",
-    "https://sarvamsafety.com/image/cache/catalog/banner/Banner4-1170x500.jpg",
-    "",
+    "https://img.freepik.com/free-psd/engineer-hard-hat-mockup-psd-ppe-equipment_53876-115929.jpg",
+    "https://img.freepik.com/free-photo/firefighters-rescued-survivors_1150-8370.jpg",
+    "https://img.freepik.com/free-photo/front-view-protective-glasses-with-hard-hat-headphones_23-2148773471.jpg",
   ];
   return (
     <div className="z-0">
       <Slider {...settings}>
         {carouselImages.map((image) => (
-          <img
-            src={`${image}`}
-            alt=""
-            className="w-full"
-            style={{ height: "100px" }}
-          />
+          <ImageComponent image={image} />
         ))}
       </Slider>
     </div>
