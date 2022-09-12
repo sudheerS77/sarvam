@@ -14,7 +14,7 @@ const App = () => {
       <div>
         {/* <LgNavbar /> */}
         <Navbar />
-        <div className="relative top-36">
+        <div className="relative">
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             {/* <Route path="/about" element={<Aboutpage />}></Route> */}
